@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AULA01 - JAVASCRIPT</title>
+    </head>
+    <body>
+
+        <input type="text" id="teste">
+        <button onclick="enviar()">Enviar</button>  
+        <div id="resultado"></div> 
+
+    </body>
+
+    <script>
+        let nome = "Camilinha";
+        let idade = 15;
+        let altura = 1.60;
+        let estudando = true;
+
+        document.write("<h1>"+nome+"</h1>");
+        document.write("<br>");
+        document.write("<h2>"+idade+"</h2>");
+        document.write("<br>");
+        document.write("<h3>"+altura+"</h3>");
+        document.write("<br>");
+        document.write("<h4>"+estudando+"</h4>");
+
+        let teste = document.getElementById("teste");
+        let areaTexto = document.getElementById("resultado");
+
+        function enviar(){
+            let mensagem = teste.value;
+            //pegamos o .value para ver o texto
+            alert("Você digitou: "+ mensagem);
+            areaTexto.innerHTML = "<h3>Você digitou: " +mensagem+ "</h3>" 
+        }
+    </script>
+
+</html>
